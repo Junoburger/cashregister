@@ -42,7 +42,8 @@ if (isMember):
     print(totalTxt.format(sum=total))
 else:
     basePriceAfterPromo = calcBasePriceAfterPromo(item1, item2)
-    print("price after discounts = ", basePriceAfterPromo)
+    txt = "price after discounts = {sum:2.2f}"
+    print(txt.format(sum=basePriceAfterPromo))
     taxAmount = basePriceAfterPromo / 100 * tax
     total = basePriceAfterPromo + taxAmount
     totalTxt = "total price = {sum:2.2f}"
