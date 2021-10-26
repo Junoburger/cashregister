@@ -24,6 +24,10 @@ def calcBasePriceAfterPromo(price1, price2):
         item1AtReducedPrice = price1 - price1 / 100 * 50
         basePriceAfterPromo = item1AtReducedPrice + price2
         return basePriceAfterPromo
+    else:
+        item1AtReducedPrice = price1 - price1 / 100 * 50
+        basePriceAfterPromo = item1AtReducedPrice + price2
+        return basePriceAfterPromo
 
 
 if (isMember):
