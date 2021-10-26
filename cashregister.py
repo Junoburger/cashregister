@@ -11,7 +11,7 @@ else:
     isMember = False
 
 basePrice = item1 + item2
-txt = "Base price ={sum: 2.2f}"
+txt = "base price ={sum: 2.2f}"
 print(txt.format(sum=basePrice))
 
 
@@ -30,14 +30,16 @@ if (isMember):
     basePriceAfterPromo = calcBasePriceAfterPromo(item1, item2)
     clubMemberReduction = basePriceAfterPromo / 100 * 10
     basePriceWithMemberReduction = basePriceAfterPromo - clubMemberReduction
-    txt = "Price after discounts = {sum:2.2f}"
+    txt = "price after discounts = {sum:2.2f}"
     print(txt.format(sum=basePriceWithMemberReduction))
     taxAmount = basePriceWithMemberReduction / 100 * tax
-    total = "Total price = {sum:2.2f}"
-    print(total.format(sum=basePriceWithMemberReduction + taxAmount))
+    total = basePriceWithMemberReduction + taxAmount
+    totalTxt = "total price = {sum:2.2f}"
+    print(totalTxt.format(sum=total))
 else:
     basePriceAfterPromo = calcBasePriceAfterPromo(item1, item2)
-    print("Price after discounts = ", basePriceAfterPromo)
+    print("price after discounts = ", basePriceAfterPromo)
     taxAmount = basePriceAfterPromo / 100 * tax
-    total = "Total price = {sum:2.2f}"
-    print(total.format(sum=basePriceAfterPromo + taxAmount))
+    total = basePriceAfterPromo + taxAmount
+    totalTxt = "total price = {sum:2.2f}"
+    print(totalTxt.format(sum=total))
